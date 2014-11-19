@@ -1,15 +1,17 @@
 body {
-	background-color: #eef;
+	background-color: #99f;
 	font-family: 'helvetica neue', helvetica, sans-serif;
 }
 
 #main {
-	width: 95%;
+	width: 90%;
 	margin: auto;
 	margin-top: 3%;
 	margin-bottom: 3%;
 	background: #fff;
 	border: 1px solid black;
+	padding: 2.5%;
+	border-radius: 7px;
 }
 
 #footer {
@@ -17,9 +19,22 @@ body {
 	margin: auto;
 	background: #fff;
 	border: 1px solid black;
+	border-radius: 3px;
 }
 
 #footer p {
 	margin: 3px 5px;
 	font-size: 0.75em;
+}
+
+.home-button {
+	width: 7%;
+}
+
+.home-button a {
+	border: none;
+}
+
+.subheader {
+	display: inline;
 }
