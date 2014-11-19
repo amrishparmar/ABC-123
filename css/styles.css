@@ -25,6 +25,7 @@ body {
 #footer p {
 	margin: 3px 5px;
 	font-size: 0.75em;
+	text-align: center;
 }
 
 .home-button {
@@ -35,6 +36,17 @@ body {
 }
 
 .home-button a {
+	border: none;
+}
+
+.back-button {
+	width: 20%;
+	float: left;
+	position: relative;
+	top: -5px;
+}
+
+.back-button a {
 	border: none;
 }
 
