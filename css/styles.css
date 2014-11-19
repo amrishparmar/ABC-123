@@ -28,13 +28,10 @@ body {
 }
 
 .home-button {
-	width: 7%;
+	width: 15%;
+	float: left;
 }
 
 .home-button a {
 	border: none;
-}
-
-.subheader {
-	display: inline;
 }
