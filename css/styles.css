@@ -28,8 +28,10 @@ body {
 }
 
 .home-button {
-	width: 15%;
+	width: 20%;
 	float: left;
+	position: relative;
+	top: -5px;
 }
 
 .home-button a {
