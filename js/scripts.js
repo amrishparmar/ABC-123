@@ -54,6 +54,7 @@ $(document).ready(function() {
 // go to next letter of alphabet
 $('#arrow-right').on('click', function(e) {
 	changeItem(1);
+	document.getElementById('audio').play();
 	e.preventDefault();
 });
 
