@@ -3,6 +3,6 @@ var Item = function(letter, word) {
 	this.word = word;
 }
 
-var a1 = new Item('b', 'bapple');
+var pictures
 
-$('#letter').html(a1.letter);
+var a1 = new Item('a', 'apple');
