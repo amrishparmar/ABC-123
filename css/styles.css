@@ -6,6 +6,10 @@
 
 /* universal styles */
 
+body * {
+	font-family: 'Schoolbell', cursive;
+}
+
 #main {
 	width: 95%;
 	margin: auto;
@@ -29,6 +33,10 @@
 	margin: 3px 5px;
 	font-size: 0.75em;
 	text-align: center;
+}
+
+#footer * {
+	font-family: arial, sans-serif;
 }
 
 .home-button {
@@ -80,3 +88,22 @@
 		min-height: 560px;
 	}
 }
+
+/* learning areas */
+
+#learning-area {
+	width: 100%;
+	margin: auto;
+	text-align: center;
+}
+
+#learn-pic {
+	width: 60%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+#letter, #word {
+	font-size: 1.5em;
+}
+
