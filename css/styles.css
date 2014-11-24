@@ -107,3 +107,12 @@ body * {
 	font-size: 1.5em;
 }
 
+#word-info {
+	margin-top: 12.5%;
+}
+
+@media screen and (max-height: 567px) {
+	#word-info {
+		margin-top: 7.5%;
+	}
+}
