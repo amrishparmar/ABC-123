@@ -64,28 +64,28 @@ body * {
 /* media query for iPhone original through 4s */
 @media screen and (width: 320px) and (height: 480px){
 	#main {
-		min-height: 400px;
+		min-height: 430px;
 	}
 }
 
 /* media query for iPhone 5/5c/5s */
 @media screen and (width: 320px) and (height: 568px) {
 	#main {
-		min-height: 506px;
+		min-height: 536px;
 	}
 }
 
 /* media query for iPhone 6 */
 @media screen and (width: 375px) and (height: 672px) {
 	#main {
-		min-height: 592px;
+		min-height: 622px;
 	}
 }
 
 /* media query for 720p/1080p phones */
 @media screen and (width: 360px) and (height: 640px) {
 	#main {
-		min-height: 560px;
+		min-height: 590px;
 	}
 }
 
@@ -125,7 +125,7 @@ body * {
 
 #quiz-top p {
 	vertical-align: top;
-	font-size: 1.4em;
+	font-size: 1.3em;
 	font-weight: bold;
 }
 
@@ -133,18 +133,15 @@ body * {
 	width: 50%;
 }
 
-#choose-answer {
-	margin-top: 5px;
-}
-
 #choose-answer p {
 	font-size: 1.75em;
 }
 
-#choose-answer p:first-child {
-	font-size: 1.5em;
+#answer-chosen {
+	display: none;
+	margin-top: 5%;
 }
 
-#correct {
-	margin-top: 5%;
+#correction {
+	font-size: 1.5em;
 }

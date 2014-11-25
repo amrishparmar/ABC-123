@@ -25,14 +25,19 @@
         <div id="quiz-top"class="container-fluid" >
           <p>Q X of Y</p>
           <img id="quiz-pic" src="img/apple.png" alt="placeholder">
-          <p>Score: Z</p>
+          <p id="score">Score: Z</p>
         </div>
+        <p style="font-size:1.5em;"><strong>Choose the correct answer:</strong></p>
         <div id="choose-answer">
-          <p><strong>Choose the correct answer:</strong></p>
-          <p id="answer1" class="col-md-6 col-xs-6">text1 <span id="result1"></span></p>
-          <p id="answer2" class="col-md-6 col-xs-6">text2 <span id="result2"></span></p>
-          <p id="answer3" class="col-md-6 col-xs-6">text3 <span id="result3"></span></p>
-          <p id="answer4" class="col-md-6 col-xs-6">text4 <span id="result4"></span></p>
+          <a href="#"><p id="answer1" class="answer-option col-md-6 col-xs-6">text1 </p><i id="result1"></i></a>
+          <a href="#"><p id="answer2" class="answer-option col-md-6 col-xs-6">text2 </p><i id="result2"></i></a>
+          <a href="#"><p id="answer3" class="answer-option col-md-6 col-xs-6">text3 </p><i id="result3"></i></a>
+          <a href="#"><p id="answer4" class="answer-option col-md-6 col-xs-6">text4 </p><i id="result4"></i></a>
+        </div>
+        <div id="answer-chosen">
+          <i class="fa fa-4x"></i>
+          <p id="correction">The correct answer is xxx</p>
+          <a id="next-question" class="btn btn-primary" href="#">Next question</a>
         </div>
       </div>
   	</div>

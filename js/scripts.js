@@ -66,21 +66,56 @@ $('#arrow-left').on('click', function(e) {
 
 /* quiz code */
 
-var correctAnswer;
+var correctAnswerNum;
+var correctAnswerText;
+var score = 0;
 
 function assignAnswer() {
-	correctAnswer = Math.floor((Math.random() * 4) + 1);
+	correctAnswerNum = Math.floor((Math.random() * 4) + 1);
 	for (var i = 1; i <= 4; i++) {
-		if (i !== correctAnswer) {
+		if (i !== correctAnswerNum) {
 			$('#answer' + i).html(itemArray[Math.floor(Math.random() * itemArray.length)][Math.floor(Math.random() * 3)].word);
 		}
 		else {
 			// need to add code to change pic once they are ready
-			$('#answer' + i).html(itemArray[Math.floor(Math.random() * itemArray.length)][Math.floor(Math.random() * 3)].word);
+			correctAnswerText = itemArray[Math.floor(Math.random() * itemArray.length)][Math.floor(Math.random() * 3)].word;
+			$('#answer' + i).html(correctAnswerText);
 		}
 	}
 }
 
+function setScore(increase) {
+	if (increase) {
+		score++;
+	}
+	$('#score').html('Score: ' + score);
+}
+
 $(document).ready(function() {
 	assignAnswer();
+	setScore(false);
+});
+
+$('.answer-option').on('click', function(e) {
+	var answerChosenId = $(this).attr('id');
+	var idNum = answerChosenId[answerChosenId.length - 1];
+	var $smiley = $('#answer-chosen > i:first-child');
+	
+	$smiley.removeClass('fa-smile-o fa-frown-o');
+
+	if (idNum == correctAnswerNum) {
+		$smiley.addClass('fa-smile-o');
+		$smiley.css('color', 'green');
+		$('#correction').html('Correct! Well done.');
+		setScore(true);
+	}
+	else {
+		$smiley.addClass('fa-frown-o');
+		$smiley.css('color', 'red');
+		$('#correction').html('The correct answer is ' + correctAnswerText);
+	}
+
+	$('#choose-answer').slideUp('fast');
+	$('#answer-chosen').slideDown('fast');
+	e.preventDefault();
 });
