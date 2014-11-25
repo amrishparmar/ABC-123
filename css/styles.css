@@ -116,3 +116,35 @@ body * {
 		margin-top: 7.5%;
 	}
 }
+
+/* quiz areas */
+
+#quiz-top p, #quiz-top img {
+	display: inline-block;
+}
+
+#quiz-top p {
+	vertical-align: top;
+	font-size: 1.4em;
+	font-weight: bold;
+}
+
+#quiz-pic {
+	width: 50%;
+}
+
+#choose-answer {
+	margin-top: 5px;
+}
+
+#choose-answer p {
+	font-size: 1.75em;
+}
+
+#choose-answer p:first-child {
+	font-size: 1.5em;
+}
+
+#correct {
+	margin-top: 5%;
+}

@@ -63,3 +63,24 @@ $('#arrow-left').on('click', function(e) {
 	changeItem(-1, e);
 	e.preventDefault();
 });
+
+/* quiz code */
+
+var correctAnswer;
+
+function assignAnswer() {
+	correctAnswer = Math.floor((Math.random() * 4) + 1);
+	for (var i = 1; i <= 4; i++) {
+		if (i !== correctAnswer) {
+			$('#answer' + i).html(itemArray[Math.floor(Math.random() * itemArray.length)][Math.floor(Math.random() * 3)].word);
+		}
+		else {
+			// need to add code to change pic once they are ready
+			$('#answer' + i).html(itemArray[Math.floor(Math.random() * itemArray.length)][Math.floor(Math.random() * 3)].word);
+		}
+	}
+}
+
+$(document).ready(function() {
+	assignAnswer();
+});
