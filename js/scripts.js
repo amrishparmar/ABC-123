@@ -128,7 +128,7 @@ $('#next-question').on('click', function() {
 		$('#choose-correct').slideUp('fast');
 		$('#choose-answer').slideUp('fast');
 		$('#answer-chosen').slideUp('fast');
-		$('#final-result p:nth-child(2)').html(score);
+		$('#final-result p:nth-child(2)').html('<strong>' + score + '</strong>');
 		$('#final-result').slideDown('fast');
 	}
 	else {
