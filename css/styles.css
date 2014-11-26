@@ -63,11 +63,11 @@ body * {
 
 @media only screen and (min-width: 320px) {
 	h1 {
-		margin-left: 30%!important;
+		margin-left: 30% !important;
 	}
 
 	.learnabc {
-		margin-left: 12%!important;
+		margin-left: 12% !important;
 	}
 
 }
@@ -75,38 +75,38 @@ body * {
 /* small phones */
 @media only screen and (min-width: 480px) {
 	h1 {
-		margin-left: 35%!important;
+		margin-left: 35% !important;
 	}
 
 	.abc {
-		margin-left: 23%!important;
+		margin-left: 23% !important;
 	}
 
 }
 
 @media only screen and (min-width: 640px) {
 	h1 {
-		margin-left: 43%!important;
+		margin-left: 43% !important;
 	}
 	.abc {
-		margin-left: 25%!important;
+		margin-left: 25% !important;
 	}
 	.123 {
-		margin-left: 65%!important;
+		margin-left: 65% !important;
 	}
 
 }
 
 @media only screen and (min-width: 768px) {
 	h1 {
-		margin-left: 42%!important;
+		margin-left: 42% !important;
 	}
 
 }
 
 @media only screen and (min-width: 640px) {
 	h1 {
-		margin-left: 42%!important;
+		margin-left: 42% !important;
 	}
 
 }
