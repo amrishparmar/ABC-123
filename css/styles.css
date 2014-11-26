@@ -61,11 +61,67 @@ body * {
 	border: none;
 }
 
+@media only screen and (min-width: 320px) {
+	h1 {
+		margin-left: 30%!important;
+	}
+
+	.learnabc {
+		margin-left: 12%!important;
+	}
+
+}
+
+/* small phones */
+@media only screen and (min-width: 480px) {
+	h1 {
+		margin-left: 35%!important;
+	}
+
+	.abc {
+		margin-left: 23%!important;
+	}
+
+}
+
+@media only screen and (min-width: 640px) {
+	h1 {
+		margin-left: 43%!important;
+	}
+	.abc {
+		margin-left: 25%!important;
+	}
+	.123 {
+		margin-left: 65%!important;
+	}
+
+}
+
+@media only screen and (min-width: 768px) {
+	h1 {
+		margin-left: 42%!important;
+}
+
+}
+
+@media only screen and (min-width: 640px) {
+	h1 {
+		margin-left: 42%!important;
+}
+
+}
+
+
+
+
+
 /* media query for iPhone original through 4s */
 @media screen and (width: 320px) and (height: 480px){
 	#main {
 		min-height: 400px;
 	}
+
+
 }
 
 /* media query for iPhone 5/5c/5s */
