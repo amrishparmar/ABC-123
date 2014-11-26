@@ -69,6 +69,7 @@ $('#arrow-left').on('click', function(e) {
 var correctAnswerNum;
 var correctAnswerText;
 var score = 0;
+var currentQuestion = 1;
 
 function assignAnswer() {
 	correctAnswerNum = Math.floor((Math.random() * 4) + 1);
@@ -92,6 +93,7 @@ function setScore(increase) {
 }
 
 $(document).ready(function() {
+	$('#currentQ').html(currentQuestion);
 	assignAnswer();
 	setScore(false);
 });
@@ -112,10 +114,27 @@ $('.answer-option').on('click', function(e) {
 	else {
 		$smiley.addClass('fa-frown-o');
 		$smiley.css('color', 'red');
-		$('#correction').html('The correct answer is ' + correctAnswerText);
+		$('#correction').html('The correct answer is ' + correctAnswerText + '.');
 	}
 
 	$('#choose-answer').slideUp('fast');
 	$('#answer-chosen').slideDown('fast');
 	e.preventDefault();
+});
+
+$('#next-question').on('click', function() {
+	currentQuestion++;
+	if (currentQuestion === 11) {
+		$('#choose-correct').slideUp('fast');
+		$('#choose-answer').slideUp('fast');
+		$('#answer-chosen').slideUp('fast');
+		$('#final-result p:nth-child(2)').html(score);
+		$('#final-result').slideDown('fast');
+	}
+	else {
+		$('#currentQ').html(currentQuestion);
+		assignAnswer();
+		$('#choose-answer').slideDown('fast');
+		$('#answer-chosen').slideUp('fast');
+	}
 });
