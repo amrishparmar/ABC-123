@@ -5,7 +5,7 @@ var Item = function(letter, word, sound) {
 	this.sound = sound;
 }
 
-var a = [new Item('A', 'Apple', 'sound/Apple.mp3'), new Item('A', 'Ant'), new Item('A', 'Airport')];
+var a = [new Item('A', 'Apple', 'sound/alpha/Apple.mp3'), new Item('A', 'Ant', 'sound/alpha/Ant.mp3'), new Item('A', 'Airport', 'sound/alpha/Airport.mp3')];
 var b = [new Item('B', 'Boy'), new Item('B', 'Balloon'), new Item('B', 'Banana')];
 var c = [new Item('C', 'Cat'), new Item('C', 'Car'), new Item('C', 'Chocolate')];
 var d = [new Item('D', 'Dog'), new Item('D', 'Door'), new Item('D', 'Doctor')];

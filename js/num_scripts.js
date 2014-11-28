@@ -25,7 +25,7 @@ var eighteen = new Number( 18, 'Eighteen');
 var nineteen = new Number( 19, 'Nineteen');
 var twenty = new Number( 20, 'Twenty');
 
-var numbers = [one,two,three,four,five,six,seven,eight,nine,ten,eleven,twelve, thirteen,fourteen,fifteen,sixteen,seventeen,eighteen,nineteen,twenty];
+var numbers = [one,two,three,four,five,six,seven,eight,nine,ten,eleven,twelve,thirteen,fourteen,fifteen,sixteen,seventeen,eighteen,nineteen,twenty];
 var currentIndex = 0;
 
 // helper function to handle mod of negative numbers - snippet from http://stackoverflow.com/a/17323608
@@ -33,8 +33,10 @@ function mod(n, m) {
 	return ((m % n) + n) % n;
 }
 
+// set what is displayed on screen
 function changeItem(direction) {
 	currentIndex = mod(numbers.length, currentIndex + direction);
+	$('#learn-pic').attr('alt', numbers[currentIndex].numeral);
 	$('#numeral').html(numbers[currentIndex].numeral);
 	$('#word').html(numbers[currentIndex].word);
 }
