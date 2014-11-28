@@ -159,8 +159,12 @@ body * {
 	font-size: 1.5em;
 }
 
-#word-info {
+#word-info, #number-info {
 	margin-top: 12.5%;
+}
+
+#number-info h2 {
+	font-size: 4em;
 }
 
 @media screen and (max-height: 567px) {
