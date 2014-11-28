@@ -1,17 +1,18 @@
 // object definition for each item
-var Item = function(letter, word) {
+var Item = function(letter, word, sound) {
 	this.letter = letter;
 	this.word = word;
+	this.sound = sound;
 }
 
-var a = [new Item('A', 'Apple'), new Item('A', 'Ant'), new Item('A', 'Airport')];
+var a = [new Item('A', 'Apple', 'sound/Apple.mp3'), new Item('A', 'Ant'), new Item('A', 'Airport')];
 var b = [new Item('B', 'Boy'), new Item('B', 'Balloon'), new Item('B', 'Banana')];
 var c = [new Item('C', 'Cat'), new Item('C', 'Car'), new Item('C', 'Chocolate')];
 var d = [new Item('D', 'Dog'), new Item('D', 'Door'), new Item('D', 'Doctor')];
 var e = [new Item('E', 'Eye'), new Item('E', 'Eggs'), new Item('E', 'Elephant')];
 var f = [new Item('F', 'Fire'), new Item('F', 'Fish'), new Item('F', 'Fox')];
 var g = [new Item('G', 'Girl'), new Item('G', 'Goat'), new Item('G', 'Goal')];
-var h = [new Item('H', 'Hotal'), new Item('H', 'Hair'), new Item('H', 'Hospital')];
+var h = [new Item('H', 'Hotel'), new Item('H', 'Hair'), new Item('H', 'Hospital')];
 var i = [new Item('I', 'Ice-cream'), new Item('I', 'Igloo'), new Item('I', 'Ice')];
 var j = [new Item('J', 'Jam'), new Item('J', 'Jelly'), new Item('J', 'Juice')];
 var k = [new Item('K', 'King'), new Item('K', 'Kid'), new Item('K', 'Kettle')];
