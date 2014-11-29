@@ -1,29 +1,29 @@
-var Number = function(numeral, word) {
+var Number = function(numeral, word, sound) {
 	this.numeral = numeral;
 	this.word = word;
-	//this.sound = sound;
+	this.sound = sound;
 }
 
-var one = new Number(1, 'One');
-var two = new Number( 2, 'Two');
-var three = new Number( 3, 'Three');
-var four = new Number( 4, 'Four');
-var five = new Number( 5, 'Five');
-var six = new Number( 6, 'Six');
-var seven = new Number( 7, 'Seven');
-var eight = new Number( 8, 'Eight');
-var nine = new Number( 9, 'Nine');
-var ten = new Number( 10, 'Ten');
-var eleven = new Number( 11, 'Eleven');
-var twelve = new Number( 12, 'Twelve');
-var thirteen = new Number( 13, 'Thirteen');
-var fourteen = new Number( 14, 'Fourteen');
-var fifteen = new Number( 15, 'Fifteen');
-var sixteen = new Number( 16, 'Sixteen');
-var seventeen = new Number( 17, 'Seventeen');
-var eighteen = new Number( 18, 'Eighteen');
-var nineteen = new Number( 19, 'Nineteen');
-var twenty = new Number( 20, 'Twenty');
+var one = new Number(1, 'One', new Audio('sound/num/one.mp3'));
+var two = new Number( 2, 'Two', new Audio('sound/num/one.mp3'));
+var three = new Number( 3, 'Three', new Audio('sound/num/one.mp3'));
+var four = new Number( 4, 'Four', new Audio('sound/num/one.mp3'));
+var five = new Number( 5, 'Five', new Audio('sound/num/one.mp3'));
+var six = new Number( 6, 'Six', new Audio('sound/num/one.mp3'));
+var seven = new Number( 7, 'Seven', new Audio('sound/num/one.mp3'));
+var eight = new Number( 8, 'Eight', new Audio('sound/num/one.mp3'));
+var nine = new Number( 9, 'Nine', new Audio('sound/num/one.mp3'));
+var ten = new Number( 10, 'Ten', new Audio('sound/num/one.mp3'));
+var eleven = new Number( 11, 'Eleven', new Audio('sound/num/one.mp3'));
+var twelve = new Number( 12, 'Twelve', new Audio('sound/num/one.mp3'));
+var thirteen = new Number( 13, 'Thirteen', new Audio('sound/num/one.mp3'));
+var fourteen = new Number( 14, 'Fourteen', new Audio('sound/num/one.mp3'));
+var fifteen = new Number( 15, 'Fifteen', new Audio('sound/num/one.mp3'));
+var sixteen = new Number( 16, 'Sixteen', new Audio('sound/num/one.mp3'));
+var seventeen = new Number( 17, 'Seventeen', new Audio('sound/num/one.mp3'));
+var eighteen = new Number( 18, 'Eighteen', new Audio('sound/num/one.mp3'));
+var nineteen = new Number( 19, 'Nineteen', new Audio('sound/num/one.mp3'));
+var twenty = new Number( 20, 'Twenty', new Audio('sound/num/one.mp3'));
 
 var numbers = [one,two,three,four,five,six,seven,eight,nine,ten,eleven,twelve,thirteen,fourteen,fifteen,sixteen,seventeen,eighteen,nineteen,twenty];
 var currentIndex = 0;
@@ -44,17 +44,19 @@ function changeItem(direction) {
 // choose an 'A' item on page load
 $(document).ready(function() {
 	changeItem(0);
+	numbers[currentIndex].sound.play();
 });
 
 // go to next letter of alphabet
 $('#arrow-right').on('click', function(e) {
 	changeItem(1);
-	document.getElementById('audio').play();
+	numbers[currentIndex].sound.play();
 	e.preventDefault();
 });
 
 // go to previous letter of alphabet
 $('#arrow-left').on('click', function(e) {
-	changeItem(-1, e);
+	changeItem(-1);
+	numbers[currentIndex].sound.play();
 	e.preventDefault();
 });
