@@ -216,3 +216,7 @@ body * {
 #final-result p {
 	font-size: 2em;
 }
+
+#final-result p:nth-child(2) {
+	color: black;
+}
