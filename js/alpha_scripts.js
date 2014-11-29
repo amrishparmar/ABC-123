@@ -74,13 +74,15 @@ var currentQuestion = 1;
 
 function assignAnswer() {
 	correctAnswerNum = Math.floor((Math.random() * 4) + 1);
+	correctAnswerText = itemArray[Math.floor(Math.random() * itemArray.length)][Math.floor(Math.random() * 3)].word;
 	for (var i = 1; i <= 4; i++) {
 		if (i !== correctAnswerNum) {
-			$('#answer' + i).html(itemArray[Math.floor(Math.random() * itemArray.length)][Math.floor(Math.random() * 3)].word);
+			badAnswerText = itemArray[Math.floor(Math.random() * itemArray.length)][Math.floor(Math.random() * 3)].word;
+			while (badAnswerText === correctAnswerText) // prevent duplicate answers displaying
+				badAnswerText = itemArray[Math.floor(Math.random() * itemArray.length)][Math.floor(Math.random() * 3)].word;
+			$('#answer' + i).html(badAnswerText);
 		}
 		else {
-			// need to add code to change pic once they are ready
-			correctAnswerText = itemArray[Math.floor(Math.random() * itemArray.length)][Math.floor(Math.random() * 3)].word;
 			$('#answer' + i).html(correctAnswerText);
 		}
 	}
