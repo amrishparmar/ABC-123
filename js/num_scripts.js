@@ -60,3 +60,89 @@ $('#arrow-left').on('click', function(e) {
 	numbers[currentIndex].sound.play();
 	e.preventDefault();
 });
+
+/* quiz code */
+
+if ($(document).find('title').text() === 'Quiz 123s') {
+
+	var correctAnswerNum;
+	var correctAnswerText;
+	var score = 0;
+	var currentQuestion = 1;
+
+	// choose a random answer and update text 
+	function assignAnswer() {
+		correctAnswerNum = Math.floor((Math.random() * 4) + 1);
+		correctAnswerText = numbers[Math.floor(Math.random() * numbers.length)].word;
+		var badAnswerText = [];
+		for (var i = 1; i <= 4; i++) {
+			if (i !== correctAnswerNum) {
+				badAnswerText[i] = numbers[Math.floor(Math.random() * numbers.length)].word;
+				while (badAnswerText[i] === correctAnswerText) // prevent duplicate of correct answer displaying
+					badAnswerText[i] = numbers[Math.floor(Math.random() * numbers.length)].word;
+				$('#answer' + i).html(badAnswerText[i]);
+			}
+			else {
+				$('#answer' + i).html(correctAnswerText);
+			}
+		}
+	}
+
+	// display/increase score
+	function setScore(increase) {
+		if (increase) {
+			score++;
+		}
+		$('#score').html('Score: ' + score);
+	}
+
+	$(document).ready(function() {
+		$('#currentQ').html(currentQuestion);
+		assignAnswer();
+		setScore(false);
+	});
+
+	// display user feedback upon selecting an answer
+	$('.answer-option').on('click', function(e) {
+		var answerChosenId = $(this).attr('id');
+		var idNum = answerChosenId[answerChosenId.length - 1];
+		var $smiley = $('#answer-chosen > i:first-child');
+		
+		$smiley.removeClass('fa-smile-o fa-frown-o');
+
+		if (idNum == correctAnswerNum) {
+			$smiley.addClass('fa-smile-o');
+			$smiley.css('color', 'green');
+			$('#correction').html('Correct! Well done.');
+			setScore(true);
+		}
+		else {
+			$smiley.addClass('fa-frown-o');
+			$smiley.css('color', 'red');
+			$('#correction').html('The correct answer is ' + correctAnswerText + '.');
+		}
+
+		$('#choose-answer').slideUp('fast');
+		$('#answer-chosen').slideDown('fast');
+		e.preventDefault();
+	});
+
+	// change display when 'next question' button is clicked
+	$('#next-question').on('click', function() {
+		currentQuestion++;
+		if (currentQuestion === 11) {
+			$('#choose-correct').slideUp('fast');
+			$('#choose-answer').slideUp('fast');
+			$('#answer-chosen').slideUp('fast');
+			$('#final-result p:nth-child(2)').html('<strong>- ' + score + ' -</strong>');
+			$('#final-result').slideDown('fast');
+		}
+		else {
+			$('#currentQ').html(currentQuestion);
+			assignAnswer();
+			$('#choose-answer').slideDown('fast');
+			$('#answer-chosen').slideUp('fast');
+		}
+	});
+
+}
