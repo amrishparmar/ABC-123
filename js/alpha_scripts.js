@@ -35,6 +35,8 @@ var z = [new Item('Z', 'Zero', new Audio ('sound/alpha/Apple.mp3')), new Item('Z
 
 var itemArray = [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z];
 
+/* learning code */
+
 if ($(document).find('title').text() === 'Learning ABCs') {
 
 	var currentIndex = 0;
