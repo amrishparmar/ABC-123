@@ -37,46 +37,46 @@ var itemArray = [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z];
 
 if ($(document).find('title').text() === 'Learning ABCs') {
 
-var currentIndex = 0;
-var chooseRandom = 0;
+	var currentIndex = 0;
+	var chooseRandom = 0;
 
-// helper function to handle mod of negative numbers - snippet from http://stackoverflow.com/a/17323608
-function mod(n, m) {
-	return ((m % n) + n) % n;
-}
+	// helper function to handle mod of negative numbers - snippet from http://stackoverflow.com/a/17323608
+	function mod(n, m) {
+		return ((m % n) + n) % n;
+	}
 
-// change the displayed item
-function changeItem(direction) {
-	chooseRandom = Math.floor(Math.random() * 3);
-	currentIndex = mod(itemArray.length, currentIndex + direction);
-	$('#letter').html(itemArray[currentIndex][chooseRandom].letter);
-	$('#word').html(itemArray[currentIndex][chooseRandom].word);
-}
+	// change the displayed item
+	function changeItem(direction) {
+		chooseRandom = Math.floor(Math.random() * 3);
+		currentIndex = mod(itemArray.length, currentIndex + direction);
+		$('#letter').html(itemArray[currentIndex][chooseRandom].letter);
+		$('#word').html(itemArray[currentIndex][chooseRandom].word);
+	}
 
-// choose an 'A' item on page load
-$(document).ready(function() {
-	changeItem(0);
-	itemArray[currentIndex][chooseRandom].sound.play();
-});
+	// choose an 'A' item on page load
+	$(document).ready(function() {
+		changeItem(0);
+		itemArray[currentIndex][chooseRandom].sound.play();
+	});
 
-// go to next letter of alphabet
-$('#arrow-right').on('click', function(e) {
-	changeItem(1);
-	itemArray[currentIndex][chooseRandom].sound.play();
-	e.preventDefault();
-});
+	// go to next letter of alphabet
+	$('#arrow-right').on('click', function(e) {
+		changeItem(1);
+		itemArray[currentIndex][chooseRandom].sound.play();
+		e.preventDefault();
+	});
 
-// go to previous letter of alphabet
-$('#arrow-left').on('click', function(e) {
-	changeItem(-1);
-	itemArray[currentIndex][chooseRandom].sound.play();
-	e.preventDefault();
-});
+	// go to previous letter of alphabet
+	$('#arrow-left').on('click', function(e) {
+		changeItem(-1);
+		itemArray[currentIndex][chooseRandom].sound.play();
+		e.preventDefault();
+	});
 
-$('#learn-pic').on('click', function(e) {
-	itemArray[currentIndex][chooseRandom].sound.play();
-	e.preventDefault();
-});
+	$('#learn-pic').on('click', function(e) {
+		itemArray[currentIndex][chooseRandom].sound.play();
+		e.preventDefault();
+	});
 
 }
 
@@ -84,83 +84,83 @@ $('#learn-pic').on('click', function(e) {
 
 if ($(document).find('title').text() === 'Quiz ABCs') {
 
-var correctAnswerNum;
-var correctAnswerText;
-var score = 0;
-var currentQuestion = 1;
+	var correctAnswerNum;
+	var correctAnswerText;
+	var score = 0;
+	var currentQuestion = 1;
 
-// choose a random answer answer and update text 
-function assignAnswer() {
-	correctAnswerNum = Math.floor((Math.random() * 4) + 1);
-	correctAnswerText = itemArray[Math.floor(Math.random() * itemArray.length)][Math.floor(Math.random() * 3)].word;
-	for (var i = 1; i <= 4; i++) {
-		if (i !== correctAnswerNum) {
-			badAnswerText = itemArray[Math.floor(Math.random() * itemArray.length)][Math.floor(Math.random() * 3)].word;
-			while (badAnswerText === correctAnswerText) // prevent duplicate of correct answer displaying
+	// choose a random answer answer and update text 
+	function assignAnswer() {
+		correctAnswerNum = Math.floor((Math.random() * 4) + 1);
+		correctAnswerText = itemArray[Math.floor(Math.random() * itemArray.length)][Math.floor(Math.random() * 3)].word;
+		for (var i = 1; i <= 4; i++) {
+			if (i !== correctAnswerNum) {
 				badAnswerText = itemArray[Math.floor(Math.random() * itemArray.length)][Math.floor(Math.random() * 3)].word;
-			$('#answer' + i).html(badAnswerText);
+				while (badAnswerText === correctAnswerText) // prevent duplicate of correct answer displaying
+					badAnswerText = itemArray[Math.floor(Math.random() * itemArray.length)][Math.floor(Math.random() * 3)].word;
+				$('#answer' + i).html(badAnswerText);
+			}
+			else {
+				$('#answer' + i).html(correctAnswerText);
+			}
 		}
-		else {
-			$('#answer' + i).html(correctAnswerText);
+	}
+
+	// display/increase score
+	function setScore(increase) {
+		if (increase) {
+			score++;
 		}
-	}
-}
-
-// display/increase score
-function setScore(increase) {
-	if (increase) {
-		score++;
-	}
-	$('#score').html('Score: ' + score);
-}
-
-$(document).ready(function() {
-	$('#currentQ').html(currentQuestion);
-	assignAnswer();
-	setScore(false);
-});
-
-// display user feedback upon selecting an answer
-$('.answer-option').on('click', function(e) {
-	var answerChosenId = $(this).attr('id');
-	var idNum = answerChosenId[answerChosenId.length - 1];
-	var $smiley = $('#answer-chosen > i:first-child');
-	
-	$smiley.removeClass('fa-smile-o fa-frown-o');
-
-	if (idNum == correctAnswerNum) {
-		$smiley.addClass('fa-smile-o');
-		$smiley.css('color', 'green');
-		$('#correction').html('Correct! Well done.');
-		setScore(true);
-	}
-	else {
-		$smiley.addClass('fa-frown-o');
-		$smiley.css('color', 'red');
-		$('#correction').html('The correct answer is ' + correctAnswerText + '.');
+		$('#score').html('Score: ' + score);
 	}
 
-	$('#choose-answer').slideUp('fast');
-	$('#answer-chosen').slideDown('fast');
-	e.preventDefault();
-});
-
-// change display when 'next question' button is clicked
-$('#next-question').on('click', function() {
-	currentQuestion++;
-	if (currentQuestion === 11) {
-		$('#choose-correct').slideUp('fast');
-		$('#choose-answer').slideUp('fast');
-		$('#answer-chosen').slideUp('fast');
-		$('#final-result p:nth-child(2)').html('<strong>- ' + score + ' -</strong>');
-		$('#final-result').slideDown('fast');
-	}
-	else {
+	$(document).ready(function() {
 		$('#currentQ').html(currentQuestion);
 		assignAnswer();
-		$('#choose-answer').slideDown('fast');
-		$('#answer-chosen').slideUp('fast');
-	}
-});
+		setScore(false);
+	});
+
+	// display user feedback upon selecting an answer
+	$('.answer-option').on('click', function(e) {
+		var answerChosenId = $(this).attr('id');
+		var idNum = answerChosenId[answerChosenId.length - 1];
+		var $smiley = $('#answer-chosen > i:first-child');
+		
+		$smiley.removeClass('fa-smile-o fa-frown-o');
+
+		if (idNum == correctAnswerNum) {
+			$smiley.addClass('fa-smile-o');
+			$smiley.css('color', 'green');
+			$('#correction').html('Correct! Well done.');
+			setScore(true);
+		}
+		else {
+			$smiley.addClass('fa-frown-o');
+			$smiley.css('color', 'red');
+			$('#correction').html('The correct answer is ' + correctAnswerText + '.');
+		}
+
+		$('#choose-answer').slideUp('fast');
+		$('#answer-chosen').slideDown('fast');
+		e.preventDefault();
+	});
+
+	// change display when 'next question' button is clicked
+	$('#next-question').on('click', function() {
+		currentQuestion++;
+		if (currentQuestion === 11) {
+			$('#choose-correct').slideUp('fast');
+			$('#choose-answer').slideUp('fast');
+			$('#answer-chosen').slideUp('fast');
+			$('#final-result p:nth-child(2)').html('<strong>- ' + score + ' -</strong>');
+			$('#final-result').slideDown('fast');
+		}
+		else {
+			$('#currentQ').html(currentQuestion);
+			assignAnswer();
+			$('#choose-answer').slideDown('fast');
+			$('#answer-chosen').slideUp('fast');
+		}
+	});
 
 }
