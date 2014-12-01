@@ -55,27 +55,25 @@ if ($(document).find('title').text() === 'Learning ABCs') {
 		$('#word').html(itemArray[currentIndex][chooseRandom].word);
 	}
 
-	// choose an 'A' item on page load
-	$(document).ready(function() {
+	// hide instructions and and choose an 'A' item on start button click
+	$('#instructions-learn a').on('click', function() {
+		$(this).parent().css('display','none');
+		$('#learning-area').slideDown('fast');
 		changeItem(0);
-		itemArray[currentIndex][chooseRandom].sound.play();
 	});
 
 	// go to next letter of alphabet
-	$('#arrow-right').on('click', function(e) {
+	$('#arrow-right').on('click', function() {
 		changeItem(1);
-		itemArray[currentIndex][chooseRandom].sound.play();
-		e.preventDefault();
 	});
 
 	// go to previous letter of alphabet
-	$('#arrow-left').on('click', function(e) {
+	$('#arrow-left').on('click', function() {
 		changeItem(-1);
-		itemArray[currentIndex][chooseRandom].sound.play();
-		e.preventDefault();
 	});
 
-	$('#learn-pic').on('click', function(e) {
+	// play sound of current item
+	$('#arrow-left, #arrow-right, #learn-pic, #instructions-learn a').on('click', function() {
 		itemArray[currentIndex][chooseRandom].sound.play();
 		e.preventDefault();
 	});

@@ -143,10 +143,23 @@ body * {
 
 /* learning areas */
 
+#instructions-learn {
+	text-align: center;
+}
+
+#instructions-learn p {
+	font-size: 2em;
+}
+
+#instructions-learn a {
+	font-size: 2.25em;
+}
+
 #learning-area {
 	width: 100%;
 	margin: auto;
 	text-align: center;
+	display: none;
 }
 
 #learn-pic {
