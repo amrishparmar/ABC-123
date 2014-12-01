@@ -55,7 +55,7 @@ if ($(document).find('title').text() === 'Learning ABCs') {
 		$('#word').html(itemArray[currentIndex][chooseRandom].word);
 	}
 
-	// hide instructions and and choose an 'A' item on start button click
+	// hide instructions and choose an 'A' item on start button click
 	$('#instructions-learn a').on('click', function() {
 		$(this).parent().css('display','none');
 		$('#learning-area').slideDown('fast');
@@ -114,7 +114,10 @@ if ($(document).find('title').text() === 'Quiz ABCs') {
 		$('#score').html('Score: ' + score);
 	}
 
-	$(document).ready(function() {
+	// hide instructions and assigns an answer
+	$('#instructions-learn a').on('click', function() {
+		$(this).parent().css('display','none');
+		$('#learning-area').slideDown('fast');
 		$('#currentQ').html(currentQuestion);
 		assignAnswer();
 		setScore(false);

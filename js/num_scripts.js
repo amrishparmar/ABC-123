@@ -46,10 +46,11 @@ if ($(document).find('title').text() === 'Learning 123s') {
 		$('#word').html(numbers[currentIndex].word);
 	}
 
-	// choose an 'A' item on page load
-	$(document).ready(function() {
+	// hide instructions and chooses the '1' item on start button click
+	$('#instructions-learn a').on('click', function() {
+		$(this).parent().css('display','none');
+		$('#learning-area').slideDown('fast');
 		changeItem(0);
-		numbers[currentIndex].sound.play();
 	});
 
 	// go to next letter of alphabet
@@ -103,7 +104,10 @@ if ($(document).find('title').text() === 'Quiz 123s') {
 		$('#score').html('Score: ' + score);
 	}
 
-	$(document).ready(function() {
+	// hide instructions and assigns an answer
+	$('#instructions-learn a').on('click', function() {
+		$(this).parent().css('display','none');
+		$('#learning-area').slideDown('fast');
 		$('#currentQ').html(currentQuestion);
 		assignAnswer();
 		setScore(false);
