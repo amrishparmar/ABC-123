@@ -49,7 +49,7 @@ if ($(document).find('title').text() === 'Learning 123s') {
 	// hide instructions and chooses the '1' item on start button click
 	$('#instructions-learn a').on('click', function() {
 		$(this).parent().css('display','none');
-		$('#learning-area').slideDown('fast');
+		$('#learning-area').fadeIn('fast');
 		changeItem(0);
 	});
 
@@ -107,7 +107,7 @@ if ($(document).find('title').text() === 'Quiz 123s') {
 	// hide instructions and assigns an answer
 	$('#instructions-learn a').on('click', function() {
 		$(this).parent().css('display','none');
-		$('#learning-area').slideDown('fast');
+		$('#learning-area').fadeIn('fast');
 		$('#currentQ').html(currentQuestion);
 		assignAnswer();
 		setScore(false);
