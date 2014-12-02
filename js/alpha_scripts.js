@@ -7,16 +7,16 @@ var Item = function(letter, word, sound, image) {
 }
 
 var a = [new Item('A', 'Apple', new Audio ('sound/alpha/Apple.mp3')), new Item('A', 'Ant', new Audio('sound/alpha/Ant.mp3')), new Item('A', 'Airport', new Audio('sound/alpha/Airport.mp3'))];
-var b = [new Item('B', 'Boy', new Audio ('sound/alpha/Apple.mp3')), new Item('B', 'Balloon', new Audio ('sound/alpha/Apple.mp3')), new Item('B', 'Banana', new Audio ('sound/alpha/Apple.mp3'))];
-var c = [new Item('C', 'Cat', new Audio ('sound/alpha/Apple.mp3')), new Item('C', 'Car', new Audio ('sound/alpha/Apple.mp3')), new Item('C', 'Chocolate', new Audio ('sound/alpha/Apple.mp3'))];
-var d = [new Item('D', 'Dog', new Audio ('sound/alpha/Apple.mp3')), new Item('D', 'Door', new Audio ('sound/alpha/Apple.mp3')), new Item('D', 'Doctor', new Audio ('sound/alpha/Apple.mp3'))];
-var e = [new Item('E', 'Eye', new Audio ('sound/alpha/Apple.mp3')), new Item('E', 'Eggs', new Audio ('sound/alpha/Apple.mp3')), new Item('E', 'Elephant', new Audio ('sound/alpha/Apple.mp3'))];
-var f = [new Item('F', 'Fire', new Audio ('sound/alpha/Apple.mp3')), new Item('F', 'Fish', new Audio ('sound/alpha/Apple.mp3')), new Item('F', 'Fox', new Audio ('sound/alpha/Apple.mp3'))];
-var g = [new Item('G', 'Girl', new Audio ('sound/alpha/Apple.mp3')), new Item('G', 'Goat', new Audio ('sound/alpha/Apple.mp3')), new Item('G', 'Goal', new Audio ('sound/alpha/Apple.mp3'))];
-var h = [new Item('H', 'Hotel', new Audio ('sound/alpha/Apple.mp3')), new Item('H', 'Hair', new Audio ('sound/alpha/Apple.mp3')), new Item('H', 'Hospital', new Audio ('sound/alpha/Apple.mp3'))];
-var i = [new Item('I', 'Ice-cream', new Audio ('sound/alpha/Apple.mp3')), new Item('I', 'Igloo', new Audio ('sound/alpha/Apple.mp3')), new Item('I', 'Ice', new Audio ('sound/alpha/Apple.mp3'))];
-var j = [new Item('J', 'Jam', new Audio ('sound/alpha/Apple.mp3')), new Item('J', 'Jelly', new Audio ('sound/alpha/Apple.mp3')), new Item('J', 'Juice', new Audio ('sound/alpha/Apple.mp3'))];
-var k = [new Item('K', 'King', new Audio ('sound/alpha/Apple.mp3')), new Item('K', 'Kid', new Audio ('sound/alpha/Apple.mp3')), new Item('K', 'Kettle', new Audio ('sound/alpha/Apple.mp3'))];
+var b = [new Item('B', 'Boy', new Audio ('sound/alpha/Boy.mp3')), new Item('B', 'Balloon', new Audio ('sound/alpha/Balloon.mp3')), new Item('B', 'Banana', new Audio ('sound/alpha/Banana.mp3'))];
+var c = [new Item('C', 'Cat', new Audio ('sound/alpha/Cat.mp3')), new Item('C', 'Car', new Audio ('sound/alpha/Car.mp3')), new Item('C', 'Chocolate', new Audio ('sound/alpha/Chocolate.mp3'))];
+var d = [new Item('D', 'Dog', new Audio ('sound/alpha/Dog.mp3')), new Item('D', 'Door', new Audio ('sound/alpha/Door.mp3')), new Item('D', 'Doctor', new Audio ('sound/alpha/Doctor.mp3'))];
+var e = [new Item('E', 'Eye', new Audio ('sound/alpha/Apple.mp3')), new Item('E', 'Eggs', new Audio ('sound/alpha/Eggs.mp3')), new Item('E', 'Elephant', new Audio ('sound/alpha/Elephant.mp3'))];
+var f = [new Item('F', 'Fire', new Audio ('sound/alpha/Fire.mp3')), new Item('F', 'Fish', new Audio ('sound/alpha/Fish.mp3')), new Item('F', 'Fox', new Audio ('sound/alpha/Fox.mp3'))];
+var g = [new Item('G', 'Girl', new Audio ('sound/alpha/Girl.mp3')), new Item('G', 'Goat', new Audio ('sound/alpha/Goat.mp3')), new Item('G', 'Goal', new Audio ('sound/alpha/Goal.mp3'))];
+var h = [new Item('H', 'Hotel', new Audio ('sound/alpha/Hotel.mp3')), new Item('H', 'Hair', new Audio ('sound/alpha/Hair.mp3')), new Item('H', 'Hospital', new Audio ('sound/alpha/Hospital.mp3'))];
+var i = [new Item('I', 'Ice-cream', new Audio ('sound/alpha/Ice-cream.mp3')), new Item('I', 'Igloo', new Audio ('sound/alpha/Igloo.mp3')), new Item('I', 'Ice', new Audio ('sound/alpha/Ice.mp3'))];
+var j = [new Item('J', 'Jam', new Audio ('sound/alpha/Jam.mp3')), new Item('J', 'Jelly', new Audio ('sound/alpha/Jelly.mp3')), new Item('J', 'Juice', new Audio ('sound/alpha/Juice.mp3'))];
+var k = [new Item('K', 'King', new Audio ('sound/alpha/King.mp3')), new Item('K', 'Kid', new Audio ('sound/alpha/Kid.mp3')), new Item('K', 'Kettle', new Audio ('sound/alpha/Apple.mp3'))];
 var l = [new Item('L', 'Log', new Audio ('sound/alpha/Apple.mp3')), new Item('L', 'Lock', new Audio ('sound/alpha/Apple.mp3')), new Item('L', 'Lemon', new Audio ('sound/alpha/Apple.mp3'))];
 var m = [new Item('M', 'Man', new Audio ('sound/alpha/Apple.mp3')), new Item('M', 'Mango', new Audio ('sound/alpha/Apple.mp3')), new Item('M', 'Maze', new Audio ('sound/alpha/Apple.mp3'))];
 var n = [new Item('N', 'Nun', new Audio ('sound/alpha/Apple.mp3')), new Item('N', 'Nail', new Audio ('sound/alpha/Apple.mp3')), new Item('N', 'Nut', new Audio ('sound/alpha/Apple.mp3'))];
