@@ -6,7 +6,7 @@ var Item = function(letter, word, sound, image) {
 	this.image = image;
 }
 
-var a = [new Item('A', 'Apple', new Audio ('sound/alpha/Apple.mp3'), 'img/alpha/apple.png'), new Item('A', 'Ant', new Audio('sound/alpha/Ant.mp3'), 'img/alpha/apple.png'), new Item('A', 'Airport', new Audio('sound/alpha/Airport.mp3'), 'img/alpha/apple.png')];
+var a = [new Item('A', 'Apple', new Audio ('sound/alpha/Apple.mp3'), 'img/alpha/APPLE.jpg'), new Item('A', 'Ant', new Audio('sound/alpha/Ant.mp3'), 'img/alpha/ant.jpg'), new Item('A', 'Airport', new Audio('sound/alpha/Airport.mp3'), 'img/alpha/airport.png')];
 var b = [new Item('B', 'Boy', new Audio ('sound/alpha/Boy.mp3'), 'img/alpha/boy.jpg'), new Item('B', 'Balloon', new Audio ('sound/alpha/Balloon.mp3'), 'img/alpha/balloon.jpg'), new Item('B', 'Banana', new Audio ('sound/alpha/Banana.mp3'), 'img/alpha/banana.png')];
 var c = [new Item('C', 'Cat', new Audio ('sound/alpha/Cat.mp3'), 'img/alpha/cat.png'), new Item('C', 'Car', new Audio ('sound/alpha/Car.mp3'), 'img/alpha/car.png'), new Item('C', 'Chocolate', new Audio ('sound/alpha/Chocolate.mp3'), 'img/alpha/chocolate.png')];
 var d = [new Item('D', 'Dog', new Audio ('sound/alpha/Dog.mp3'), 'img/alpha/dog.jpg'), new Item('D', 'Door', new Audio ('sound/alpha/Door.mp3'), 'img/alpha/door.jpg'), new Item('D', 'Doctor', new Audio ('sound/alpha/Doctor.mp3'), 'img/alpha/doctor.jpg')];
@@ -19,7 +19,7 @@ var j = [new Item('J', 'Jam', new Audio ('sound/alpha/Jam.mp3'), 'img/alpha/jam.
 var k = [new Item('K', 'King', new Audio ('sound/alpha/King.mp3'), 'img/alpha/king.gif'), new Item('K', 'Kid', new Audio ('sound/alpha/Kid.mp3'), 'img/alpha/kid.gif'), new Item('K', 'Kettle', new Audio ('sound/alpha/Kettle.mp3'), 'img/alpha/kettle.jpeg')];
 var l = [new Item('L', 'Log', new Audio ('sound/alpha/Log.mp3'), 'img/alpha/log.png'), new Item('L', 'Lock', new Audio ('sound/alpha/Lock.mp3'), 'img/alpha/lock.jpeg'), new Item('L', 'Lemon', new Audio ('sound/alpha/Lemon.mp3'), 'img/alpha/lemon.jpeg')];
 var m = [new Item('M', 'Man', new Audio ('sound/alpha/Man.mp3'), 'img/alpha/man.png'), new Item('M', 'Mango', new Audio ('sound/alpha/Mango.mp3'), 'img/alpha/mango.png'), new Item('M', 'Maze', new Audio ('sound/alpha/Maze.mp3'), 'img/alpha/maze.jpeg')];
-var n = [new Item('N', 'Nun', new Audio ('sound/alpha/Nun.mp3'), 'img/alpha/nun.png'), new Item('N', 'Nail', new Audio ('sound/alpha/Nail.mp3'), 'img/alpha/nail.jpeg'), new Item('N', 'Nut', new Audio ('sound/alpha/Nut.mp3'), 'img/alpha/nut.jpg')];
+var n = [new Item('N', 'Nun', new Audio ('sound/alpha/Nun.mp3'), 'img/alpha/nun.png'), new Item('N', 'Nail', new Audio ('sound/alpha/Nail.mp3'), 'img/alpha/nail.jpeg'), new Item('N', 'Nut', new Audio ('sound/alpha/Nut.mp3'), 'img/alpha/nut.png')];
 var o = [new Item('O', 'Orange', new Audio ('sound/alpha/Orange.mp3'), 'img/alpha/orange.png'), new Item('O', 'Oval', new Audio ('sound/alpha/Oval.mp3'), 'img/alpha/oval.png'), new Item('O', 'Octopus', new Audio ('sound/alpha/Octopus.mp3'), 'img/alpha/octopus.jpeg')];
 var p = [new Item('P', 'Pencil', new Audio ('sound/alpha/Pencil.mp3'), 'img/alpha/pencil.png'), new Item('P', 'Pig', new Audio ('sound/alpha/Pig.mp3'), 'img/alpha/pig.jpeg'), new Item('P', 'Penguin', new Audio ('sound/alpha/Penguin.mp3'), 'img/alpha/penguin.png')];
 var q = [new Item('Q', 'Queen', new Audio ('sound/alpha/Queen.mp3'), 'img/alpha/queen.png'), new Item('Q', 'Question', new Audio ('sound/alpha/Question.mp3'), 'img/alpha/question.png'), new Item('Q', 'Quiet', new Audio ('sound/alpha/Quite.mp3'), 'img/alpha/quiet.jpeg')];
