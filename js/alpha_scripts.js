@@ -57,7 +57,7 @@ if ($(document).find('title').text() === 'Learning ABCs') {
 	}
 
 	// hide instructions and choose an 'A' item on start button click
-	$('#instructions-learn a').on('click', function() {
+	$('.instructions-learn a').on('click', function() {
 		$(this).parent().css('display','none');
 		$('#learning-area').fadeIn('fast');
 		changeItem(0);
@@ -74,7 +74,7 @@ if ($(document).find('title').text() === 'Learning ABCs') {
 	});
 
 	// play sound of current item
-	$('#arrow-left, #arrow-right, #learn-pic, #instructions-learn a').on('click', function(e) {
+	$('#arrow-left, #arrow-right, #learn-pic, .instructions-learn a').on('click', function(e) {
 		itemArray[currentIndex][chooseRandom].sound.play();
 		e.preventDefault();
 	});
@@ -119,7 +119,7 @@ if ($(document).find('title').text() === 'Quiz ABCs') {
 	}
 
 	// hide instructions and assigns an answer
-	$('#instructions-learn a').on('click', function() {
+	$('.instructions-learn a').on('click', function() {
 		$(this).parent().css('display','none');
 		$('#learning-area').fadeIn('fast');
 		$('#currentQ').html(currentQuestion);

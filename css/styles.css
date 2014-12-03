@@ -147,15 +147,15 @@ hr.remove-margin-top {
 
 /* learning areas */
 
-#instructions-learn {
+.instructions-learn {
 	text-align: center;
 }
 
-#instructions-learn p {
+.instructions-learn p {
 	font-size: 2em;
 }
 
-#instructions-learn a {
+.instructions-learn a {
 	font-size: 2.25em;
 }
 

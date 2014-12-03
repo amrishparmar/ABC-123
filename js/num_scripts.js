@@ -47,7 +47,7 @@ if ($(document).find('title').text() === 'Learning 123s') {
 	}
 
 	// hide instructions and chooses the '1' item on start button click
-	$('#instructions-learn a').on('click', function() {
+	$('.instructions-learn a').on('click', function() {
 		$(this).parent().css('display','none');
 		$('#learning-area').fadeIn('fast');
 		changeItem(0);
@@ -56,13 +56,15 @@ if ($(document).find('title').text() === 'Learning 123s') {
 	// go to next letter of alphabet
 	$('#arrow-right').on('click', function(e) {
 		changeItem(1);
-		numbers[currentIndex].sound.play();
-		e.preventDefault();
 	});
 
 	// go to previous letter of alphabet
 	$('#arrow-left').on('click', function(e) {
 		changeItem(-1);
+	});
+
+	// play sound of current item
+	$('#arrow-left, #arrow-right, #learn-pic, .instructions-learn a').on('click', function(e) {
 		numbers[currentIndex].sound.play();
 		e.preventDefault();
 	});
@@ -105,7 +107,7 @@ if ($(document).find('title').text() === 'Quiz 123s') {
 	}
 
 	// hide instructions and assigns an answer
-	$('#instructions-learn a').on('click', function() {
+	$('.instructions-learn a').on('click', function() {
 		$(this).parent().css('display','none');
 		$('#learning-area').fadeIn('fast');
 		$('#currentQ').html(currentQuestion);
