@@ -39,28 +39,6 @@ body * {
 	font-family: arial, sans-serif;
 }
 
-.home-button {
-	width: 20%;
-	float: left;
-	position: relative;
-	top: -5px;
-}
-
-.home-button a {
-	border: none;
-}
-
-.back-button {
-	width: 20%;
-	float: left;
-	position: relative;
-	top: -5px;
-}
-
-.back-button a {
-	border: none;
-}
-
 @media only screen and (min-width: 320px) {
 	h1 {
 		margin-left: 30% !important;
@@ -91,7 +69,7 @@ body * {
 	.abc {
 		margin-left: 25% !important;
 	}
-	.123 {
+	.one-two-three {
 		margin-left: 65% !important;
 	}
 
@@ -140,6 +118,32 @@ body * {
 		min-height: 590px;
 	}
 }
+
+/* index.html */
+
+.abc img {
+	width: 150px;
+}
+
+.one-two-three img {
+	width: 150px;
+}
+
+/* submenus */
+
+.home-button {
+	position: relative;
+}
+
+img#title-mini {
+	width: 100%;
+	margin-bottom: 0;
+}
+
+hr.remove-margin-top {
+	margin-top: 0;
+}
+
 
 /* learning areas */
 
