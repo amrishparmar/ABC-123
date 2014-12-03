@@ -6,7 +6,7 @@ var Item = function(letter, word, sound, image) {
 	this.image = image;
 }
 
-var a = [new Item('A', 'Apple', new Audio ('sound/alpha/Apple.mp3'), 'img/alpha/apple.png'), new Item('A', 'Ant', new Audio('sound/alpha/Ant.mp3'), 'img/alpha/apple.png'), new Item('A', 'Airport', new Audio('sound/alpha/Airport.mp3'), 'img/alpha/apple.png')];
+var a = [new Item('A', 'Apple', new Audio ('sound/alpha/Apple.mp3'), 'img/alpha/APPLE.jpg'), new Item('A', 'Ant', new Audio('sound/alpha/Ant.mp3'), 'img/alpha/ant.jpg'), new Item('A', 'Airport', new Audio('sound/alpha/Airport.mp3'), 'img/alpha/airport.png')];
 var b = [new Item('B', 'Boy', new Audio ('sound/alpha/Boy.mp3'), 'img/alpha/apple.png'), new Item('B', 'Balloon', new Audio ('sound/alpha/Balloon.mp3'), 'img/alpha/apple.png'), new Item('B', 'Banana', new Audio ('sound/alpha/Banana.mp3'), 'img/alpha/apple.png')];
 var c = [new Item('C', 'Cat', new Audio ('sound/alpha/Cat.mp3'), 'img/alpha/apple.png'), new Item('C', 'Car', new Audio ('sound/alpha/Car.mp3'), 'img/alpha/apple.png'), new Item('C', 'Chocolate', new Audio ('sound/alpha/Chocolate.mp3'), 'img/alpha/apple.png')];
 var d = [new Item('D', 'Dog', new Audio ('sound/alpha/Dog.mp3'), 'img/alpha/apple.png'), new Item('D', 'Door', new Audio ('sound/alpha/Door.mp3'), 'img/alpha/apple.png'), new Item('D', 'Doctor', new Audio ('sound/alpha/Doctor.mp3'), 'img/alpha/apple.png')];
@@ -53,6 +53,7 @@ if ($(document).find('title').text() === 'Learning ABCs') {
 		currentIndex = mod(itemArray.length, currentIndex + direction);
 		$('#letter').html(itemArray[currentIndex][chooseRandom].letter);
 		$('#word').html(itemArray[currentIndex][chooseRandom].word);
+		$('#learn-pic').attr('src', itemArray[currentIndex][chooseRandom].image);
 	}
 
 	// hide instructions and choose an 'A' item on start button click
@@ -73,7 +74,7 @@ if ($(document).find('title').text() === 'Learning ABCs') {
 	});
 
 	// play sound of current item
-	$('#arrow-left, #arrow-right, #learn-pic, #instructions-learn a').on('click', function() {
+	$('#arrow-left, #arrow-right, #learn-pic, #instructions-learn a').on('click', function(e) {
 		itemArray[currentIndex][chooseRandom].sound.play();
 		e.preventDefault();
 	});
@@ -92,7 +93,9 @@ if ($(document).find('title').text() === 'Quiz ABCs') {
 	// choose a random answer answer and update text 
 	function assignAnswer() {
 		correctAnswerNum = Math.floor((Math.random() * 4) + 1);
-		correctAnswerText = itemArray[Math.floor(Math.random() * itemArray.length)][Math.floor(Math.random() * 3)].word;
+		var tempLetterNum = Math.floor(Math.random() * itemArray.length);
+		var tempWordNum = Math.floor(Math.random() * 3);
+		correctAnswerText = itemArray[tempLetterNum][tempWordNum].word;
 		for (var i = 1; i <= 4; i++) {
 			if (i !== correctAnswerNum) {
 				badAnswerText = itemArray[Math.floor(Math.random() * itemArray.length)][Math.floor(Math.random() * 3)].word;
@@ -104,6 +107,7 @@ if ($(document).find('title').text() === 'Quiz ABCs') {
 				$('#answer' + i).html(correctAnswerText);
 			}
 		}
+		$('#quiz-pic').attr('src', itemArray[tempLetterNum][tempWordNum].image);
 	}
 
 	// display/increase score
