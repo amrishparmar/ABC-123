@@ -1,3 +1,7 @@
+Sources:
+
+Images:
+
 apple - http://www.istockphoto.com/illustrations/apple#462588e
 ant - http://all-free-download.com/free-vector/vector-clip-art/ant_clip_art_6124.html
 airport - http://pilotsflighttrainingschool.com/cgi-sys/defaultwebpage.cgi
@@ -49,7 +53,7 @@ penguin - http://www.clipartbest.com/clipart-yckB78ocE
 queen - http://www.clipartbest.com/clipart-yTka9eATE
 question - http://www.clipartbest.com/clipart-niEXkkn6T
 quiet - http://www.clipartbest.com/clipart-Rcdbqgoc9
-red - http://www.clipartbest.com/clipart-MiLLpypAT
+red - Created by Amrish Parmar
 rocket - http://www.clipartbest.com/clipart-KTn5oqLTq
 robot - http://www.clipartbest.com/clipart-4c9Ek5RBi
 spider - http://www.clipartbest.com/clipart-Kinq8kyiq
@@ -70,12 +74,16 @@ wing - http://www.clipartbest.com/clipart-KinXn5yiq
 x-ray - http://www.clipartbest.com/clipart-jixEddM9T
 xylophone - http://www.clipartbest.com/clipart-aiqGaGkiM
 xenops - http://depositphotos.com/vector-images/perched-bird.html
-yellow - http://www.clipartbest.com/clipart-KijGXA5iq
+yellow - Created by Amrish Parmar
 yo-yo - http://www.clipartbest.com/clipart-7caRGXBni
 yogurt - http://homeremediesforwomen.weebly.com/uti-remedies.html
 zero - http://www.the3dstudio.com/product_details.aspx?id_product=490733
 zoo - http://www.clipartbest.com/clipart-6ncXKpoTB
 zebra - http://www.amazon.com/Childrens-Wall-Decals-Cartoon-Removable/dp/B004G6QDHS
 
+Libraries:
 
+jQuery - https://jquery.com/ - MIT license
+Bootswatch Simplex (Bootstrap theme) - http://bootswatch.com/simplex/ - MIT license
+Font Awesome - https://fortawesome.github.io/Font-Awesome/ - SIL OFL 1.1
 
