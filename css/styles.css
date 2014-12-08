@@ -10,6 +10,11 @@ body * {
 	font-family: 'Schoolbell', cursive;
 }
 
+.btn {
+	font-family: 'Schoolbell', cursive;
+	font-size: 1.75em;
+}
+
 #main {
 	width: 95%;
 	margin: auto;
@@ -42,22 +47,6 @@ body * {
 @media only screen and (min-width: 320px) {
 	h1 {
 		margin-left: 30% !important;
-	}
-
-	.learnabc {
-		margin-left: 8% !important;
-	}
-
-}
-
-/* small phones */
-@media only screen and (min-width: 480px) {
-	h1 {
-		margin-left: 35% !important;
-	}
-
-	.abc {
-		margin-left: 23% !important;
 	}
 
 }
@@ -106,7 +95,7 @@ body * {
 }
 
 /* media query for iPhone 6 */
-@media screen and (width: 375px) and (height: 672px) {
+@media screen and (width: 375px) and (height: 667px) {
 	#main {
 		min-height: 622px;
 	}
@@ -144,6 +133,18 @@ hr.remove-margin-top {
 	margin-top: 0;
 }
 
+#menu-buttons {
+	width: 80%;
+}
+
+#mb-1 {
+	margin-top: 3.5%;
+	margin-bottom: 4.5%;
+}
+
+#mb-2 {
+	margin-bottom: 3.5%;
+}
 
 /* learning areas */
 
@@ -153,10 +154,6 @@ hr.remove-margin-top {
 
 .instructions-learn p {
 	font-size: 2em;
-}
-
-.instructions-learn a {
-	font-size: 2.25em;
 }
 
 #learning-area {
@@ -191,6 +188,12 @@ hr.remove-margin-top {
 }
 
 /* quiz areas */
+
+.start-btn {
+	width: 80%;
+	margin-top: 2%;
+	margin-bottom: 3.5%;
+}
 
 #quiz-top p, #quiz-top img {
 	display: inline-block;
