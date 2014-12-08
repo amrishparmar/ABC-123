@@ -81,6 +81,10 @@ zero - http://www.the3dstudio.com/product_details.aspx?id_product=490733
 zoo - http://www.clipartbest.com/clipart-6ncXKpoTB
 zebra - http://www.amazon.com/Childrens-Wall-Decals-Cartoon-Removable/dp/B004G6QDHS
 
+Audio:
+
+All sound clips are from http://fromtexttospeech.com/ which is a free text-to-speech converter
+
 Libraries:
 
 jQuery - https://jquery.com/ - MIT license
