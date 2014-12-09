@@ -2,7 +2,7 @@ Sources:
 
 Images:
 
-apple - http://www.istockphoto.com/illustrations/apple#462588e
+apple - https://commons.wikimedia.org/wiki/File:Navionics_Apple_Team.png - Creative Commons Attribution-Share Alike 3.0 Unported
 ant - http://all-free-download.com/free-vector/vector-clip-art/ant_clip_art_6124.html
 airport - http://pilotsflighttrainingschool.com/cgi-sys/defaultwebpage.cgi
 banana - http://www.clker.com/clipart-bananas-2.html
