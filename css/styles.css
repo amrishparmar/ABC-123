@@ -110,6 +110,14 @@ body * {
 
 /* index.html */
 
+header {
+	text-align: center;
+}
+
+header img {
+	width: 200px;
+}
+
 .abc img {
 	width: 150px;
 }
@@ -178,8 +186,12 @@ hr.remove-margin-top {
 	font-size: 1.5em;
 }
 
-#word-info, #number-info {
+#word-info {
 	margin-top: 12.5%;
+}
+
+#number-info {
+	margin-top: 2.5%;
 }
 
 #number-info h2 {
