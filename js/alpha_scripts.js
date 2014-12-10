@@ -54,6 +54,7 @@ if ($(document).find('title').text() === 'Learning ABCs') {
 		$('#letter').html(itemArray[currentIndex][chooseRandom].letter);
 		$('#word').html(itemArray[currentIndex][chooseRandom].word);
 		$('#learn-pic').attr('src', itemArray[currentIndex][chooseRandom].image);
+		$('#learn-pic').attr('alt', itemArray[currentIndex][chooseRandom].letter);
 	}
 
 	// hide instructions and choose an 'A' item on start button click
@@ -89,6 +90,7 @@ if ($(document).find('title').text() === 'Quiz ABCs') {
 	var correctAnswerText;
 	var score = 0;
 	var currentQuestion = 1;
+	var answerAllowed = true; // prevent multiple taps to artificially increase score
 
 	// choose a random answer answer and update text 
 	function assignAnswer() {
@@ -108,6 +110,7 @@ if ($(document).find('title').text() === 'Quiz ABCs') {
 			}
 		}
 		$('#quiz-pic').attr('src', itemArray[tempLetterNum][tempWordNum].image);
+		$('#quiz-pic').attr('alt', itemArray[tempLetterNum][tempWordNum].word);
 	}
 
 	// display/increase score
@@ -128,29 +131,33 @@ if ($(document).find('title').text() === 'Quiz ABCs') {
 	});
 
 	// display user feedback upon selecting an answer
-	$('.answer-option').on('click', function(e) {
-		var answerChosenId = $(this).attr('id');
-		var idNum = answerChosenId[answerChosenId.length - 1];
-		var $smiley = $('#answer-chosen > i:first-child');
-		
-		$smiley.removeClass('fa-smile-o fa-frown-o');
+	if (answerAllowed) {
+		$('.answer-option').on('click', function(e) {
+			var answerChosenId = $(this).attr('id');
+			var idNum = answerChosenId[answerChosenId.length - 1];
+			var $smiley = $('#answer-chosen > i:first-child');
+			
+			$smiley.removeClass('fa-smile-o fa-frown-o');
 
-		if (idNum == correctAnswerNum) {
-			$smiley.addClass('fa-smile-o');
-			$smiley.css('color', 'green');
-			$('#correction').html('Correct! Well done.');
-			setScore(true);
-		}
-		else {
-			$smiley.addClass('fa-frown-o');
-			$smiley.css('color', 'red');
-			$('#correction').html('The correct answer is ' + correctAnswerText + '.');
-		}
+			if (idNum == correctAnswerNum) {
+				$smiley.addClass('fa-smile-o');
+				$smiley.css('color', 'green');
+				$('#correction').html('Correct! Well done.');
+				setScore(true);
+			}
+			else {
+				$smiley.addClass('fa-frown-o');
+				$smiley.css('color', 'red');
+				$('#correction').html('The correct answer is ' + correctAnswerText + '.');
+			}
 
-		$('#choose-answer').slideUp('fast');
-		$('#answer-chosen').slideDown('fast');
-		e.preventDefault();
-	});
+			$('#choose-answer').slideUp('fast');
+			$('#answer-chosen').slideDown('fast');
+			e.preventDefault();
+
+			answerAllowed = false;
+		});
+	}
 
 	// change display when 'next question' button is clicked
 	$('#next-question').on('click', function() {
@@ -168,6 +175,8 @@ if ($(document).find('title').text() === 'Quiz ABCs') {
 			$('#choose-answer').slideDown('fast');
 			$('#answer-chosen').slideUp('fast');
 		}
+
+		answerAllowed = true;
 	});
 
 }
