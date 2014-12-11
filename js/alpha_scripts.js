@@ -88,9 +88,15 @@ if ($(document).find('title').text() === 'Quiz ABCs') {
 
 	var correctAnswerNum;
 	var correctAnswerText;
-	var score = 0;
-	var currentQuestion = 1;
-	var answerAllowed = true; // prevent multiple taps to artificially increase score
+	var score;
+	var currentQuestion;
+	var answerAllowed = true; // prevent multiple taps to artificially increase score /* set to true */
+
+	function initConditions() {
+		score = 0;
+		currentQuestion = 1;
+		answerAllowed = true;
+	}
 
 	// choose a random answer answer and update text 
 	function assignAnswer() {
@@ -123,6 +129,7 @@ if ($(document).find('title').text() === 'Quiz ABCs') {
 
 	// hide instructions and assigns an answer
 	$('.instructions-learn a').on('click', function() {
+		initConditions();
 		$(this).parent().css('display','none');
 		$('#learning-area').fadeIn('fast');
 		$('#currentQ').html(currentQuestion);
@@ -177,6 +184,17 @@ if ($(document).find('title').text() === 'Quiz ABCs') {
 		}
 
 		answerAllowed = true;
+	});
+
+	// restarts the quiz on tapping 'play again' button
+	$('#restart-quiz').on('click', function(e) {
+		initConditions();
+		setScore(false);
+		assignAnswer();
+		$('#choose-correct').slideDown('fast');
+		$('#choose-answer').slideDown('fast');
+		$('#final-result').slideUp('fast');
+		e.preventDefault();
 	});
 
 }
