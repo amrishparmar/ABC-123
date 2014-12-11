@@ -55,27 +55,18 @@ body * {
 	h1 {
 		margin-left: 43% !important;
 	}
-	.abc {
-		margin-left: 25% !important;
-	}
-	.one-two-three {
-		margin-left: 65% !important;
-	}
-
 }
 
 @media only screen and (min-width: 768px) {
 	h1 {
 		margin-left: 42% !important;
 	}
-
 }
 
 @media only screen and (min-width: 640px) {
 	h1 {
 		margin-left: 42% !important;
 	}
-
 }
 
 
@@ -115,15 +106,15 @@ header {
 }
 
 header img {
-	width: 200px;
+	width: 70%;
 }
 
 .abc img {
-	width: 150px;
+	width: 100%;
 }
 
 .one-two-three img {
-	width: 150px;
+	width: 100%;
 }
 
 /* submenus */
