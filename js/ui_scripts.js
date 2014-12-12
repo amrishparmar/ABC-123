@@ -10,6 +10,7 @@ $(document).ready(function() {
 		e.preventDefault();
 	});
 
+	// fade page in on page load
 	$('body').hide().fadeIn('fast');
 
 });
