@@ -6,7 +6,7 @@ var Item = function(letter, word, sound, image) {
 	this.image = image;
 }
 
-var a = [new Item('A', 'Apple', new Audio ('sound/alpha/Apple.mp3'), 'img/alpha/apple.png'), new Item('A', 'Ant', new Audio('sound/alpha/Ant.mp3'), 'img/alpha/ant.jpg'), new Item('A', 'Airport', new Audio('sound/alpha/Airport.mp3'), 'img/alpha/airport.png')];
+var a = [new Item('A', 'Apple', new Audio ('sound/alpha/Apple.mp3'), 'img/alpha/APPLE.png'), new Item('A', 'Ant', new Audio('sound/alpha/Ant.mp3'), 'img/alpha/ant.jpg'), new Item('A', 'Airport', new Audio('sound/alpha/Airport.mp3'), 'img/alpha/airport.png')];
 var b = [new Item('B', 'Boy', new Audio ('sound/alpha/Boy.mp3'), 'img/alpha/boy.png'), new Item('B', 'Balloon', new Audio ('sound/alpha/Balloon.mp3'), 'img/alpha/balloon.png'), new Item('B', 'Banana', new Audio ('sound/alpha/Banana.mp3'), 'img/alpha/banana.png')];
 var c = [new Item('C', 'Cat', new Audio ('sound/alpha/Cat.mp3'), 'img/alpha/cat.png'), new Item('C', 'Car', new Audio ('sound/alpha/Car.mp3'), 'img/alpha/car.png'), new Item('C', 'Chocolate', new Audio ('sound/alpha/Chocolate.mp3'), 'img/alpha/chocolate.png')];
 var d = [new Item('D', 'Dog', new Audio ('sound/alpha/Dog.mp3'), 'img/alpha/dog.jpg'), new Item('D', 'Door', new Audio ('sound/alpha/Door.mp3'), 'img/alpha/door.png'), new Item('D', 'Doctor', new Audio ('sound/alpha/Doctor.mp3'), 'img/alpha/doctor.png')];
